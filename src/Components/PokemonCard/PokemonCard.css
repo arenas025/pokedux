@@ -1,0 +1,38 @@
+.pokemonCard{
+    border: 1px solid #934acc;
+    border-radius:5px;
+}
+
+.abilitiesTitle{
+    background-color: #934acc;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.abilitie1{
+    text-align: center;
+    border: 1px solid #934acc ;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.abilitie2{
+    text-align: center;
+    border: 1px solid #934acc ;
+    border-radius: 5px;
+    font-size: 10px;
+
+}
+
+.abilitie3{
+    text-align: center;
+    border: 1px solid #934acc ;
+    border-radius: 5px;
+    font-size: 12px;
+    font-size: 10px;
+
+}
