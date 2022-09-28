@@ -15,7 +15,8 @@ function App() {
   const pokemons = useSelector((state) => state.pokemons)
   const loading = useSelector((state) => state.loading)
   const dispatch = useDispatch()
-  const favorites = pokemons.filter(item => item.favorite === true)
+  const estado = useSelector((state)=> state)
+  const favorites = useSelector((state)=> state.favorites)
 
   useEffect((() => {
     const responsePokemon = async()=>{
@@ -26,10 +27,6 @@ function App() {
     }
     responsePokemon()
     }),[])
-
-    useEffect(()=>{
-      console.info(favorites)
-    },[favorites])
 
     const[inputValue, setInputValue] = useState('')
 
@@ -58,8 +55,9 @@ function App() {
       <Col offset={12}>
         <Spin spinning size='large'/>
       </Col>
-      : <PokemonList pokemons={inputValue === '' ? pokemons : pokemonsFiltered}/>}
-      {isFavoritesShown && <div className='modal'>
+      : <PokemonList searcherValue={inputValue} pokemons={inputValue === '' ? pokemons : pokemonsFiltered}/>}
+      {isFavoritesShown &&
+      <div className='modal'>
         <div className='modal--content'>
           <header className='modal--content__header'>
             <p className='modal--content__header__text'>
@@ -72,9 +70,9 @@ function App() {
             className='modal--content__header__close'/>
           </header>
           <main className='modal--content__main'>
-          {favorites.map(pokemon => (
+          { favorites.length !== 0 ? favorites.map(pokemon => (
             <PokemonCardFavorite pokemon={pokemon}/>
-          ))}
+          )) : <p>Ups, you don't have any favorite pokemon, go back and select one</p> }
           </main>
         </div>
       </div>}

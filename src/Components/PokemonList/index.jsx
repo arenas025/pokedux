@@ -1,15 +1,13 @@
 import PokemonCard from "../PokemonCard";
 import { useEffect } from "react";
+import './PokemonList.scss'
 
-import './PokemonList.css'
 
-const PokemonList = ({pokemons}) => {
-
-    useEffect(()=>console.info(pokemons.length),[pokemons])
+const PokemonList = ({pokemons, searcherValue}) => {
 
     return(
         <div className="pokemonList">
-            {pokemons.length !== 0 
+            {pokemons.length !== 0 | searcherValue === '' 
                 ? pokemons.map((item) =>{
                 return(
                     <PokemonCard pokemon={item} key={item.name}/>

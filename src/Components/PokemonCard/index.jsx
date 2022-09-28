@@ -1,5 +1,5 @@
 import {Card, Col, Row} from 'antd'
-import './PokemonCard.css'
+import './PokemonCard.scss'
 import IconSelect from '../IconSelect'
 import { useDispatch } from 'react-redux'
 import { setFavorites } from '../../actions'

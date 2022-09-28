@@ -1,0 +1,95 @@
+.pokemonCard{
+    border: 1px solid #934acc;
+    border-radius:5px;
+    @media screen and (min-width:200px) and (max-width:980px) {
+        width: 150px !important;
+        height: 200px;
+    }
+    & .ant-card-head{
+        @media screen and (min-width:200px) {
+            padding: 0 10px;
+        }
+    }
+    & .ant-card-head-wrapper{
+        @media screen and (min-width:200px) and (max-width:980px) {
+            & .ant-card-head-title{
+                font-size: 10px;
+            }
+            & .ant-card-extra{
+                width: 15px;
+                padding: 0;
+                & button{
+                    height: inherit;
+                    width: inherit;
+                }
+            }
+        }
+    }
+    & .ant-card-cover{
+        @media screen and (min-width:200px) {
+            display: flex;
+            justify-content: center;
+        }
+        & img{
+            @media screen and (min-width:200px) and (max-width:980px) {
+                width: 80px;
+                height: 80px;   
+            }
+            }
+    }
+
+    & .ant-card-body{
+        padding: 10px;
+        .abilitiesTitle{
+        background-color: #934acc;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        @media screen and (min-width:200px) and (max-width:980px) {
+            font-size: 8px;
+            font-weight: normal;
+        }
+        }
+        & .ant-row{
+            @media screen and (min-width:200px) and (max-width: 980px) {
+            flex-direction: column;   
+            }
+        }
+        .abilitie1{
+            text-align: center;
+            border: 1px solid #934acc ;
+            border-radius: 5px;
+            font-size: 10px;
+            @media screen and (min-width:200px) and (max-width: 980px) {
+                width: 16rem;
+            }
+        }
+        .abilitie2{
+            text-align: center;
+            border: 1px solid #934acc ;
+            border-radius: 5px;
+            font-size: 10px;
+            width: inherit;
+            max-width: 100%;
+            @media screen and (min-width:200px) and (max-width: 980px) {
+                width: 16rem;
+                font-size: 8px;
+            }
+        }
+        .abilitie3{
+            text-align: center;
+            border: 1px solid #934acc ;
+            border-radius: 5px;
+            font-size: 12px;
+            font-size: 10px;
+            max-width: 100%;
+            @media screen and (min-width:200px) and (max-width: 980px) {
+                width: 16rem;
+                font-size: 7px;
+            }
+        }
+    }
+}
+

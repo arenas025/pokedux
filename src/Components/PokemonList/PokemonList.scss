@@ -4,6 +4,12 @@
     gap: 2rem;
     justify-items: center;
     margin-top: 10px;
+    @media screen and (min-width: 200px) and (max-width:550px) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (min-width:551px) {
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 
 .nullPokemon{

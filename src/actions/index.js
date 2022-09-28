@@ -1,4 +1,4 @@
-import { SET_POKEMON, SET_LOADING, SET_FAVORITES } from "./type";
+import { SET_POKEMON, SET_LOADING, SET_FAVORITES, REMOVE_FROM_FAVORITES } from "./type";
 import { getPokemonDetails } from "../api";
 
 
@@ -14,6 +14,11 @@ export const setFavorites = (payload) => ({
 
 export const setLoading =(payload) => ({
     type: SET_LOADING,
+    payload
+})
+
+export const removeFromFavorites = (payload) => ({
+    type: REMOVE_FROM_FAVORITES,
     payload
 })
 
