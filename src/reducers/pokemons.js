@@ -1,6 +1,6 @@
 import { SET_POKEMON, SET_LOADING, SET_FAVORITES, REMOVE_FROM_FAVORITES } from "../actions/type"
 
-const initialState = {
+export const initialState = {
     pokemons:[],
     loading: false,
     favorites: []
