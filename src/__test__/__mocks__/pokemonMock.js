@@ -9,6 +9,6 @@ const pokemonMock = {
     front_default:'sasa'
   },
   id:1,
-  favorite:true
+  favorite:false
 }
 export default pokemonMock
